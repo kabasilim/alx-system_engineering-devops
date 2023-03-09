@@ -15,3 +15,6 @@
 4. 3-new_owner --> Write a script that changes the owner of the file hello to the user betty.
 
 5. 4-empty --> Write a script that creates an empty file called hello.
+
+6. 5-execute --> Write a script that adds execute permission to the owner of the file hello.
+* The file hello will be in the working directory
