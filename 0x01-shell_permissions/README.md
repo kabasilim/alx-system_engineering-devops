@@ -35,3 +35,7 @@
 10. 9-John_Doe --> Write a script that sets the mode of the file hello to this:
 * The file hello will be in the working directory
 * You are not allowed to use commas for this script
+
+11. 10-mirror_permissions --> Write a script that sets the mode of the file hello the same as olleh’s mode.
+* The file hello will be in the working directory
+* The file olleh will be in the working directory
