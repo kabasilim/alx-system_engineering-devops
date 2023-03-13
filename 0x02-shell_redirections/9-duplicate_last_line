@@ -1,2 +1,2 @@
 #!/bin/bash
-sort iacta | uniq -d
+tail -n 1 iacta | uniq -d
