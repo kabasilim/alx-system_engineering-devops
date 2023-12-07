@@ -1,18 +1,47 @@
-#!/usr/bin/env bash
-# write a Bash script that will display information about the subdomains
+#!/bin/bash
 
-dns_config () {
-    script=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
-    echo "$2 $script" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
+# Function to display information about a subdomain
+display_info() {
+    local sub_domain=$1
+    local record_type=$2
+    local destination=$3
+
+    echo "The subdomain $sub_domain is a $record_type record and points to $destination"
 }
 
-if [ "$#" == 1 ]
-then
-  dns_config "$1" "www"
-  dns_config "$1" "lb-01"
-  dns_config "$1" "web-01"
-  dns_config "$1" "web-02"
-elif [ "$#" == 2 ]
-then
-  dns_config "$1" "$2"
+# Function to perform the DNS lookup and display information
+audit_domain() {
+    local domain=$1
+    local subdomain=$2
+
+    if [ -z "$subdomain" ]; then
+        # Default subdomains
+        subdomains=("www" "lb-01" "web-01" "web-02")
+    else
+        # Specified subdomain
+        subdomains=("$subdomain")
+    fi
+
+    for sub in "${subdomains[@]}"; do
+        # Use awk to extract relevant information from the DNS lookup
+        result=$(nslookup -type=A "$sub.$domain" | awk '/^Address: / { print $2 } /^Name:/ { print $2 }')
+
+        if [ -n "$result" ]; then
+            # Extract IP address and display information
+            ip_address=$(echo "$result" | awk 'NR==1{print}')
+            display_info "$sub" "A" "$ip_address"
+        else
+            echo "No records found for $sub.$domain"
+        fi
+    done
+}
+
+# Check if the correct number of arguments is provided
+if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]; then
+    echo "Usage: $0 <domain> [subdomain]"
+    exit 1
 fi
+
+# Call the audit_domain function with provided arguments
+audit_domain "$1" "$2"
+
