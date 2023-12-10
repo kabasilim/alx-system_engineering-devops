@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Debugging Nginx server (service (init) must say that nginx is not running)
-ln -s -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
+# configures a server to listen to port 80
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx start
 kill "$(pgrep 'nginx' | head -1)"
