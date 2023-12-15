@@ -39,5 +39,6 @@ what happens when your type google com in your browser and press enter:
 * that the application server request data from the database
 
 Some unrelated examples:
+<img width="205" alt="image" src="https://github.com/kabasilim/alx-system_engineering-devops/assets/77329878/8b15de5f-d710-4855-8bee-9d6e6572408f">
 
 
