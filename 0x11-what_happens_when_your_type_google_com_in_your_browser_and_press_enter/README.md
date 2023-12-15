@@ -1,4 +1,4 @@
-#what happens when your type google com in your browser and press enter
+# what happens when your type google com in your browser and press enter
 
 what happens when your type google com in your browser and press enter:
 - 0. What happens when... ---->>>
@@ -8,7 +8,7 @@ what happens when your type google com in your browser and press enter:
 
 -  Write a blog post explaining what happens when you type https://www.google.com in your browser and press Enter.
 
-######Requirements, your post must cover:
+###### Requirements, your post must cover:
 
 * DNS request
 * TCP/IP
@@ -27,7 +27,7 @@ what happens when your type google com in your browser and press enter:
 
 *  Add a schema to your blog post illustrating the flow of the request created when you type https://www.google.com in your browser and press Enter.
 
-######The diagram should show:
+###### The diagram should show:
 
 * DNS resolution
 * that the request hitting server IP on the appropriate port
@@ -46,7 +46,7 @@ Some unrelated examples:
 
 https://github.com/alex/what-happens-when#the-g-key-is-pressed
 
-######Requirements:
+###### Requirements:
 
 *  The pull request must bring meaningful value (not a typo correction or style improvement)
 *  Share the pull request URL in your answer file and in the field below
