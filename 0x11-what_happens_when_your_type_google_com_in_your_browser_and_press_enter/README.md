@@ -41,4 +41,14 @@ what happens when your type google com in your browser and press enter:
 Some unrelated examples:
 <img width="205" alt="image" src="https://github.com/kabasilim/alx-system_engineering-devops/assets/77329878/8b15de5f-d710-4855-8bee-9d6e6572408f">
 
+- 2. Contribute! --->>>
+* Folks on the Internet have been trying to put together a comprehensive answer to the question. Help them by submitting a pull request. Paste the link in your answer file.
+
+https://github.com/alex/what-happens-when#the-g-key-is-pressed
+
+######Requirements:
+
+*  The pull request must bring meaningful value (not a typo correction or style improvement)
+*  Share the pull request URL in your answer file and in the field below
+*  Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
 
