@@ -85,7 +85,7 @@ COMMIT
 
 # allow MULTICAST mDNS for service discovery (be sure the MULTICAST line above
 # is uncommented)
--A ufw-before-input -p udp -d 100.25.138.62 --dport 5353 -j ACCEPT
+-A ufw-before-input -p udp -d 54.209.118.249 --dport 5353 -j ACCEPT
 
 # allow MULTICAST UPnP for service discovery (be sure the MULTICAST line above
 # is uncommented)
