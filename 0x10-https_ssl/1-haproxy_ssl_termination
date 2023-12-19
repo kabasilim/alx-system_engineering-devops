@@ -52,4 +52,4 @@ backend www-backend
 	server 260808-web-01 54.209.118.249 check
 	server 260808-web-02 54.166.137.151 check
 backend letsencrypt-backend
-        server letsencrypt 100.26.49.180
+        server letsencrypt 54.209.118.2490
