@@ -89,7 +89,7 @@ COMMIT
 
 # allow MULTICAST UPnP for service discovery (be sure the MULTICAST line above
 # is uncommented)
--A ufw-before-input -p udp -d 3.85.177.20 --dport 1900 -j ACCEPT
+-A ufw-before-input -p udp -d 54.166.137.151 --dport 1900 -j ACCEPT
 
 # don't delete the 'COMMIT' line or these rules won't be processed
 COMMIT
