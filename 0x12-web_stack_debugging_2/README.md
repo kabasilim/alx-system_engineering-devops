@@ -1,5 +1,7 @@
 # webstack debugging 2
 
+![99littlebugsinthecode-holberton](https://github.com/kabasilim/alx-system_engineering-devops/assets/77329878/00180cff-cdf7-4c73-bef4-dce727d4426e)
+
 ## Requirements
 ### General
 - All your files will be interpreted on ``Ubuntu 20.04 LTS``
@@ -14,6 +16,7 @@
 ### Tasks
 0. Run software as another user --->>>
 
+![eaeff07a715ff880b1ceb8e863a1d141a74a7f85](https://github.com/kabasilim/alx-system_engineering-devops/assets/77329878/6d9e4db0-d0b0-4980-8301-2adb63affba8)
 
 The user ``root`` is, on Linux, the “superuser”. It can do anything it wants, that’s a good and bad thing. A good practice is that one should never be logged in the ``root`` user, as if you fat finger a command and for example run ``rm -rf`` /, there is no comeback. That’s why it is preferable to run as a privileged user, meaning that the user also has the ability to perform tasks that the ``root`` user can do, just need to use a specific command that you need to discover.
 <br>
