@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Script that configures nginx to run as nginx user and listening on port 8080
+# Give read-write permissions to owner and read only permission to the rest
+chmod 644 /etc/nginx/nginx.conf
+# Replace www-data with nginx in the /etc/nginx/nginx.conf file
+# and configure /etc/nginx/sites-available to listen on port 8080
+# instead of on port 80
+sed -i 's/user www-data/user nginx/' /etc/nginx/nginx.conf
+sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+# Kill any runnung apache process so that nginx won't be interrupted
+pkill apache2
+# Start the nginx service
+sudo -u nginx service nginx start
