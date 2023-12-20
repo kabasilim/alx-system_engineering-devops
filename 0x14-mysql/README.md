@@ -122,7 +122,7 @@ Having a replica member on for your MySQL database has 2 advantages:
 - <b>Make sure that UFW is allowing connections on port 3306 (default MySQL port) otherwise replication will not work</b>.
 Example:
 
-#web-01
+# web-01
 ```
 ubuntu@web-01:~$ mysql -uholberton_user -p
 Enter password: 
