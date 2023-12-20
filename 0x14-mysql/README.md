@@ -1,4 +1,5 @@
 # 0x14 mysql
+![KkrkDHT (1)](https://github.com/kabasilim/alx-system_engineering-devops/assets/77329878/14a43c4d-d4b8-43f6-8111-0eb95c03ffb4)
 
 ###### man or help:
 *   mysqldump
@@ -103,6 +104,7 @@ ubuntu@229-web-01:~$
 ```
  
 4. Setup a Primary-Replica infrastructure using MySQL ---->>>>
+![09e83e914f0d6865ce320a47f2f14837a5b190b6](https://github.com/kabasilim/alx-system_engineering-devops/assets/77329878/41bcd33c-9321-414e-bfde-637a4dc4899c)
 
 
 Having a replica member on for your MySQL database has 2 advantages:
@@ -210,6 +212,7 @@ mysql>
 ```
 
 5. MySQL backup ---->>>
+![Bbpsgif](https://github.com/kabasilim/alx-system_engineering-devops/assets/77329878/ef07658c-c0db-4e57-813a-52f5de7ec231)
 
 What if the data center where both your primary and replica database servers are hosted are down because of a power outage or even worse: flooding, fire? Then all your data would inaccessible or lost. That’s why you want to backup and store them in a different system in another physical location. This can be achieved by dumping your MySQL data, compressing them and storing them in a different data center.
 <br>
