@@ -2,6 +2,7 @@
 """This script queries the REDDIT API"""
 
 import requests
+import sys
 
 
 def number_of_subscribers(subreddit):
@@ -10,7 +11,7 @@ def number_of_subscribers(subreddit):
     subscribers (not active users, total subscribers) for
     a given subreddit.
     """
-    base_url = 'https://www.reddit.com'
+    base_url = f'https://www.reddit.com/r/{subreddit}/about.json'
     headers = {'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus\
                 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko)\
                 Chrome/107.0.0.0 Mobile Safari/537.36'}
@@ -21,4 +22,11 @@ def number_of_subscribers(subreddit):
     if data.status_code != 200:
         return 0
     return data.json().get('data').get('subscribers')
+
+if __name__ == '__main__':
+
+    if len(sys.argv) < 2:
+        print("Please pass an argument for the subreddit to search.")
+    else:
+        print("{:d}".format(number_of_subscribers(sys.argv[1])))
 
