@@ -4,20 +4,22 @@
 import requests
 
 
-def number_of_subscribers(subreddit):
+def top_ten(subreddit):
     """
-    This function queries the Reddit API and returns the number of
-    subscribers (not active users, total subscribers) for
-    a given subreddit.
+    This function prints the titles of the first
+    10 hot posts listed for a given subreddit.
     """
-    base_url = f'https://www.reddit.com/r/{subreddit}/about.json'
+    base_url = 'https://www.reddit.com'
     headers = {'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus\
                 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko)\
                 Chrome/107.0.0.0 Mobile Safari/537.36'}
 
-    data = requests.get("{}/r/{}/about.json"
+    data = requests.get("{}/r/{}/hot.json"
                         .format(base_url, subreddit), headers=headers,
                         allow_redirects=False)
     if data.status_code != 200:
-        return 0
-    return data.json().get('data').get('subscribers')
+        print(None)
+    else:
+        result = data.json().get('data').get('children')
+        for i in range(0, 10):
+            print(result[i].get('data').get('title'))
