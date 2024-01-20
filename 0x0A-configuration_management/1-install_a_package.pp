@@ -1,7 +1,11 @@
-# installs flask version 2.1.0 with pip3
+# 1-install_a_package.pp
 
-package { 'flask':
+package { 'Flask':
   ensure   => '2.1.0',
-  name     => 'flask',
+  provider => 'pip3',
+}
+
+package { 'Werkzeug':
+  ensure   => '2.1.1',
   provider => 'pip3',
 }
