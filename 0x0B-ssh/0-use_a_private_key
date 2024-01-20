@@ -1,3 +1,12 @@
-#!/usr/bin/env bash
-# This script uses ssh to connect my server using the private key with user ubuntu
-ssh -i ~/.ssh/school ubuntu@3.83.64.174
+#!/bin/bash
+
+# Specify the server's IP address or hostname
+server="8.8.8.8"
+
+# Use ssh with single-character flags to connect to the server
+ssh -i~/.ssh/school -oUser=ubuntu $server << EOF
+  # Commands to run on the server after connecting
+  # For example, 'exit' to close the connection
+  exit
+EOF
+
