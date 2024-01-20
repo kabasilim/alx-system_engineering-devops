@@ -1,7 +1,7 @@
-# configure your machine so that you can connect to a server without typing a password.
-SendEnv LANG LC_*
-    HashKnownHosts yes
-    GSSAPIAuthentication yes
-    GSSAPIDelegateCredentials no
+# ~/.ssh/config
+
+Host 54.209.118.249
+    User ubuntu
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
+
