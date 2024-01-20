@@ -1,12 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#Bash script that uses ssh to connect to your server
 
-# Specify the server's IP address or hostname
-server="8.8.8.8"
-
-# Use ssh with single-character flags to connect to the server
-ssh -i~/.ssh/school -oUser=ubuntu $server << EOF
-  # Commands to run on the server after connecting
-  # For example, 'exit' to close the connection
-  exit
-EOF
-
+ssh -i ~/.ssh/school ubuntu@54.209.118.249
