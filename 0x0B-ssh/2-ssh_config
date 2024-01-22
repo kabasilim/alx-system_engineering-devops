@@ -5,4 +5,5 @@ Host *
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials no
     IdentityFile ~/.ssh/school
-    PasswordAuthentication no
+    PasswordAuthentication yes
+
