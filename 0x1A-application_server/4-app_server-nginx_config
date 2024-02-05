@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
 # Default server ngix
+
 server {
 	listen 80 default_server;
 
 	listen [::]:80 default_server;
-	 server_name 52.87.216.79;
 
 	# SSL configuration
 	#
@@ -50,12 +49,8 @@ server {
 	location /airbnb-dynamic/number_odd_or_even/ {
 		rewrite ^/airbnb-dynamic/number_odd_or_even/(.*)$ /number_odd_or_even/$1 break;
 		proxy_pass http://localhost:5001;
-		proxy_set_header Host $host;
-		proxy_set_header X-Real-IP $remote_addr;
 	}
 	location /api/ {
 		proxy_pass http://localhost:5002;
-		proxy_set_header Host $host;
-		proxy_set_header X-Real-IP $remote_addr;
 	}
-} 
+}
