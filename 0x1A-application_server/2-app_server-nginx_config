@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # Ngix configuration that serves thebpage from the route `/airbnb-onepage/`
 server {
 	listen 80 default_server;
